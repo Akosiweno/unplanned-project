@@ -1,0 +1,647 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #28242e;
+  background: #f8f5ff
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  min-height: 100vh
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: .3;
+  background-image: radial-gradient(#bbb3c7 1px, transparent 1px);
+  background-size: 8px 8px
+}
+
+header {
+  height: 94px;
+  max-width: 1420px;
+  margin: auto;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ded9ed
+}
+
+.brand {
+  font: 700 16px/13px 'DM Mono';
+  letter-spacing: -1px
+}
+
+.brand:first-letter {
+  color: #6e55c6;
+  font-size: 22px
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #a5a1ae;
+  font: 10px 'DM Mono';
+  text-transform: uppercase
+}
+
+nav .active {
+  color: #25222a
+}
+
+nav i {
+  width: 42px;
+  height: 1px;
+  background: #d8d3e4
+}
+
+.help {
+  border: 1px solid #d6d0e2;
+  background: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font: 600 16px Georgia;
+  cursor: pointer
+}
+
+main {
+  max-width: 1340px;
+  margin: auto;
+  padding: 64px 28px 80px
+}
+
+.intro {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 55px
+}
+
+.eyebrow {
+  font: 10px 'DM Mono';
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #756e82
+}
+
+.eyebrow:first-letter {
+  color: #e77567
+}
+
+.intro h1 {
+  font: 600 clamp(46px, 6vw, 76px)/.95 'Playfair Display';
+  letter-spacing: -.06em;
+  margin: 19px 0;
+  color: #292630
+}
+
+.intro h1 em {
+  color: #7563c5
+}
+
+.intro p {
+  color: #6e6877;
+  line-height: 1.5;
+  font-size: 15px;
+  margin: auto;
+  max-width: 380px
+}
+
+.booth {
+  display: grid;
+  grid-template-columns: 1fr 370px 1fr;
+  gap: 52px;
+  align-items: center
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  font: 10px 'DM Mono';
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #5f586a;
+  border-bottom: 1px solid #ddd8e7;
+  padding-bottom: 12px
+}
+
+.heading small {
+  color: #aaa3b2;
+  font-size: 9px
+}
+
+.spaced {
+  margin-top: 34px
+}
+
+.modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  padding-top: 16px
+}
+
+.modes button {
+  height: 104px;
+  background: #fff;
+  border: 1px solid #e1dce9;
+  border-radius: 4px;
+  color: #625c69;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 15px
+}
+
+.modes button.selected {
+  border-color: #6e55c6;
+  background: #f1edff;
+  color: #342c51
+}
+
+.modes b {
+  font-size: 12px;
+  margin-top: 7px
+}
+
+.modes small {
+  font-size: 10px;
+  color: #958e9c
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding-top: 16px
+}
+
+.slot {
+  border: 1px dashed #c9c2d4;
+  border-radius: 4px;
+  background: #fcfbff;
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  color: #9d95aa;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0
+}
+
+.slot span {
+  font-size: 26px
+}
+
+.slot small {
+  font: 10px 'DM Mono';
+  text-transform: uppercase
+}
+
+.slot img {
+  width: 100%;
+  height: 65px;
+  object-fit: cover
+}
+
+.actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 12px
+}
+
+.actions button,
+.actions label {
+  font: 10px 'DM Mono';
+  text-transform: uppercase;
+  border: 1px solid #ded8e7;
+  background: #fff;
+  border-radius: 3px;
+  padding: 10px 11px;
+  cursor: pointer;
+  color: #665e72
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.preview-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font: 9px 'DM Mono';
+  text-transform: uppercase;
+  color: #837d8d;
+  margin-bottom: 11px
+}
+
+.strip {
+  width: 100%;
+  aspect-ratio: 2/3;
+  box-shadow: 13px 16px 0 #ded8eb, 0 18px 25px #372c541f;
+  padding: 23px 23px 18px;
+  display: flex;
+  flex-direction: column
+}
+
+.butter {
+  background: #f6e8a8;
+  color: #1b1b1b
+}
+
+.lilac {
+  background: #d9cdfa;
+  color: #352854
+}
+
+.cherry {
+  background: #f27a75;
+  color: #fff8ed
+}
+
+.sky {
+  background: #b7e1ed;
+  color: #123c5a
+}
+
+.ink {
+  background: #20242c;
+  color: #fff
+}
+
+.strip-brand {
+  font: 10px 'DM Mono';
+  margin-bottom: 15px
+}
+
+.strip-brand span {
+  float: right;
+  font-size: 15px
+}
+
+.strip-photos {
+  flex: 1;
+  display: grid;
+  gap: 10px;
+  min-height: 0
+}
+
+.count-1 {
+  grid-template-rows: 1fr
+}
+
+.count-2 {
+  grid-template-rows: 1fr 1fr
+}
+
+.count-4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr
+}
+
+.photo {
+  overflow: hidden;
+  background: #ffffff33
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.photo.mono img {
+  filter: grayscale(1) contrast(1.1)
+}
+
+.photo.warm img {
+  filter: sepia(.2) saturate(1.2)
+}
+
+.caption {
+  font: 600 22px/1.02 'DM Sans';
+  letter-spacing: -.05em;
+  margin-top: 18px;
+  min-height: 45px
+}
+
+.serif .caption {
+  font-family: 'Playfair Display';
+  font-size: 23px
+}
+
+.date {
+  font: 8px 'DM Mono';
+  text-transform: uppercase;
+  margin-top: auto;
+  padding-top: 15px
+}
+
+.preview>p {
+  font: italic 12px Georgia;
+  color: #817a8b;
+  margin: 25px 0 0
+}
+
+aside section {
+  margin-top: 25px
+}
+
+aside label {
+  display: block;
+  color: #776f7f;
+  font: 10px 'DM Mono';
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 10px
+}
+
+.swatches {
+  display: flex;
+  gap: 10px
+}
+
+.swatches button {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  outline: 1px solid transparent;
+  cursor: pointer
+}
+
+.swatches button.selected {
+  outline-color: #544d5d;
+  outline-offset: 3px
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #ddd7e7;
+  border-radius: 3px;
+  background: #fff;
+  padding: 10px;
+  font: 500 14px/1.3 'DM Sans';
+  color: #413b48
+}
+
+.text-tools,
+.pills {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px
+}
+
+.text-tools button,
+.pills button {
+  border: 1px solid #ded8e7;
+  border-radius: 3px;
+  background: #fff;
+  color: #716979;
+  font: 9px 'DM Mono';
+  text-transform: uppercase;
+  padding: 7px 8px;
+  cursor: pointer
+}
+
+.pills button.selected {
+  background: #6251b5;
+  color: #fff;
+  border-color: #6251b5
+}
+
+.save {
+  width: 100%;
+  margin-top: 33px;
+  border: 0;
+  border-radius: 3px;
+  background: #28242f;
+  color: #fff;
+  padding: 15px 16px;
+  display: flex;
+  justify-content: space-between;
+  font: 11px 'DM Mono';
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #bdb4d2
+}
+
+.save b {
+  font-size: 18px
+}
+
+dialog {
+  border: 0;
+  background: transparent;
+  padding: 0
+}
+
+.card {
+  width: min(430px, calc(100vw - 34px));
+  background: #fbf9ff;
+  color: #292532;
+  padding: 43px 42px 37px;
+  position: relative;
+  box-shadow: 12px 14px 0 #a79abc;
+  text-align: center
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer
+}
+
+.star {
+  font-size: 29px;
+  color: #765fc9
+}
+
+.card h2 {
+  font: 600 37px/.95 'Playfair Display';
+  letter-spacing: -.055em;
+  margin: 10px 0 14px
+}
+
+.card h2 em {
+  color: #735dc2
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #77707f;
+  margin: 0 auto 25px
+}
+
+.card label {
+  display: block;
+  text-align: left;
+  font: 9px 'DM Mono';
+  text-transform: uppercase;
+  color: #787080;
+  margin-bottom: 7px
+}
+
+.card input {
+  width: 100%;
+  border: 1px solid #d8d1e3;
+  padding: 13px;
+  font: 15px 'DM Sans'
+}
+
+.continue,
+.capture {
+  width: 100%;
+  border: 0;
+  background: #6d56be;
+  color: #fff;
+  padding: 14px;
+  margin-top: 15px;
+  font: 10px 'DM Mono';
+  text-transform: uppercase;
+  cursor: pointer
+}
+
+.continue span {
+  float: right;
+  font-size: 15px
+}
+
+.camera-card {
+  width: min(550px, calc(100vw - 34px))
+}
+
+.camera-card h2 {
+  text-align: left;
+  font-size: 30px
+}
+
+.camera-card video {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: #24212b
+}
+
+.capture {
+  background: #28242f
+}
+
+.rating {
+  border-top: 1px solid #e2ddea;
+  padding-top: 20px;
+  margin-top: 10px
+}
+
+.rating small {
+  font: 9px 'DM Mono';
+  color: #7b7482;
+  text-transform: uppercase
+}
+
+.rating button {
+  border: 0;
+  background: transparent;
+  color: #d7a84d;
+  font-size: 28px;
+  padding: 0 2px;
+  cursor: pointer
+}
+
+.card ol {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  text-align: left
+}
+
+.card li {
+  border-top: 1px solid #e2ddea;
+  padding: 14px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #625b6b
+}
+
+.card li b {
+  font: 10px 'DM Mono';
+  color: #725cc4;
+  margin-right: 12px
+}
+
+@media(max-width:900px) {
+  .booth {
+    grid-template-columns: 1fr 360px;
+    gap: 38px
+  }
+
+  aside {
+    grid-column: 1/3;
+    max-width: 570px;
+    margin: auto;
+    width: 100%
+  }
+}
+
+@media(max-width:620px) {
+  header {
+    height: 70px;
+    padding: 12px 18px
+  }
+
+  nav {
+    display: none
+  }
+
+  main {
+    padding: 44px 20px
+  }
+
+  .intro {
+    margin-bottom: 40px
+  }
+
+  .booth {
+    grid-template-columns: 1fr;
+    gap: 34px
+  }
+
+  .preview {
+    grid-row: 1
+  }
+
+  aside {
+    grid-column: auto
+  }
+
+  .strip {
+    max-width: 360px
+  }
+
+  .card {
+    padding: 38px 26px 28px
+  }
+}
