@@ -1,0 +1,103 @@
+<!DOCTYPE html >
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Together Booth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet">
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <div class="grain"></div>
+  <header><a class="brand">✦ together<br>booth</a>
+    <nav><span class="active">01 create</span><i></i><span>02 personalise</span><i></i><span>03 save</span></nav><button
+      id="helpBtn" class="help">?</button>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow">● &nbsp; made for the miles between you</div>
+      <h1>Get close.<br><em>Keep</em> the proof.</h1>
+      <p>Make a tiny keepsake with your favourite people, wherever everyone happens to be.</p>
+    </section>
+    <section class="booth">
+      <div class="controls">
+        <div class="heading">01 / choose your moment <small>tap to pick</small></div>
+        <div class="modes" id="modeGrid"><button class="selected" data-mode="solo">◉<b>solo</b><small>just
+              you</small></button><button data-mode="duo">◉ ◉<b>duo</b><small>two hearts</small></button><button
+            data-mode="group">◉ ◉<br>◉ ◉<b>group</b><small>the gang</small></button></div>
+        <div class="heading spaced">02 / add your photos <small id="photoStatus">1 photo</small></div>
+        <div class="slots" id="photoInputs"></div>
+        <div class="actions"><button id="cameraBtn">⌁ take a photo</button><label>↑ upload<input id="fileInput"
+              type="file" accept="image/*" multiple hidden></label></div>
+      </div>
+      <div class="preview">
+        <div class="preview-head"><span>your little keepsake</span><span id="frameName">butter note</span></div>
+        <div class="strip butter serif" id="stripPreview">
+          <div class="strip-brand">together booth <span>✦</span></div>
+          <div class="strip-photos" id="stripPhotos"></div>
+          <div class="caption" id="previewCaption">still figuring it out<br>together.</div>
+          <div class="date" id="previewDate"></div>
+        </div>
+        <p>a one-of-one memory, made in the moment</p>
+      </div>
+      <aside>
+        <div class="heading">03 / make it yours</div>
+        <section><label>frame</label>
+          <div class="swatches" id="frameSwatches"><button class="butter selected" data-frame="butter"></button><button
+              class="lilac" data-frame="lilac"></button><button class="cherry" data-frame="cherry"></button><button
+              class="sky" data-frame="sky"></button><button class="ink" data-frame="ink"></button></div>
+        </section>
+        <section><label for="captionInput">your words</label><textarea id="captionInput" rows="2"
+            maxlength="56">still figuring it out&#10;together.</textarea>
+          <div class="text-tools"><button id="fontToggle">Aa &nbsp; serif</button><button id="dateToggle">date
+              on</button></div>
+        </section>
+        <section><label>style</label>
+          <div class="pills" id="stylePills"><button class="selected" data-style="soft">soft</button><button
+              data-style="mono">mono</button><button data-style="warm">warm</button></div>
+        </section><button class="save" id="saveBtn">save your photopic <b>→</b></button>
+      </aside>
+    </section>
+  </main>
+  <dialog id="nameDialog">
+    <form method="dialog" class="card"><button class="close" value="cancel">×</button><span class="star">✦</span>
+      <h2>Put your name<br>on the memory.</h2>
+      <p>Just a little signature before we make it official.</p><label>your name</label><input id="nameInput"
+        maxlength="30" placeholder="e.g. Mara" required><button class="continue" id="continueBtn">continue to download
+        <span>→</span></button>
+    </form>
+  </dialog>
+  <dialog id="cameraDialog">
+    <div class="card camera-card"><button class="close" id="closeCamera">×</button>
+      <h2>Say cheese.</h2><video id="cameraFeed" autoplay playsinline></video><canvas id="cameraCanvas"
+        hidden></canvas><button class="capture" id="captureBtn">● &nbsp; capture moment</button>
+    </div>
+  </dialog>
+  <dialog id="doneDialog">
+    <div class="card"><span class="star">✦</span>
+      <h2>That’s a wrap,<br><em id="doneName">friend</em>.</h2>
+      <p id="noteText">You make distance look easy.</p>
+      <div class="rating"><small>how was your booth?</small>
+        <div id="stars"><button>☆</button><button>☆</button><button>☆</button><button>☆</button><button>☆</button></div>
+      </div><button class="continue" id="makeAnother">make another <span>↗</span></button>
+    </div>
+  </dialog>
+  <dialog id="helpDialog">
+    <div class="card"><button class="close" id="closeHelp">×</button><span class="star">✦</span>
+      <h2>Make it in<br>three little steps.</h2>
+      <ol>
+        <li><b>01</b> Choose solo, duo, or group and add your photos.</li>
+        <li><b>02</b> Pick a palette, add your words, make it feel like you.</li>
+        <li><b>03</b> Sign it, download it, and send it to your people.</li>
+      </ol>
+    </div>
+  </dialog>
+</body>
+
+</html>
